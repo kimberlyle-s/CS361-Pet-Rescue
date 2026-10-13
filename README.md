@@ -1,1 +1,2 @@
-First test commit for CS361.
+First test commit.
+Second test commit.
