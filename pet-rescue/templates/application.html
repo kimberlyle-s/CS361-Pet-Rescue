@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/pets">Available Pets</a>
+    </nav>
+
+    <div class="logo-container">
+        <img src="{{ url_for('static',
+        filename='images/logo.png') }}"
+        alt="Fluffy Tails Pet Rescue Logo"
+        class="logo">
+    </div>
+
+</header>
+
+<h1>Adoption Application</h1>
+
+<p>
+Please complete the application below.
+Expected response time: 2 weeks.
+</p>
+
+<p>
+Privacy Notice:
+Only rescue staff will see your information.
+</p>
+
+<form method="POST">
+
+<label>Name:</label>
+<input type="text" required>
+
+<label>Email:</label>
+<input type="email" required>
+
+<label>Phone:</label>
+<input type="text" required>
+
+<label>Why are you interested?</label>
+<textarea required></textarea>
+
+<p>Please review your information before submitting.</p>
+
+<button type="submit">Submit Application</button>
+
+</form>
+
+<br>
+
+<a href="/pets" onclick="return confirmCancel()">
+    <button type="button">Cancel / Back</button>
+</a>
+
+<script>
+function confirmCancel() {
+    return confirm(
+        "Are you sure you want to cancel this adoption application?"
+    );
+}
+</script>
+
+</body>
+</html>

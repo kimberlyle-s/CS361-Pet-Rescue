@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/pets">Available Pets</a>
+    </nav>
+
+    <div class="logo-container">
+        <img src="{{ url_for('static',
+        filename='images/logo.png') }}"
+        alt="Fluffy Tails Pet Rescue Logo"
+        class="logo">
+    </div>
+
+</header>
+
+<h1>Available Pets</h1>
+
+{% for id, pet in pets.items() %}
+
+<div class="card">
+
+    <img src="{{ url_for('static',
+    filename='images/' + pet.image )}}"
+    width="200"
+    alt="{{ pet.name }}">
+
+    <h2>{{ pet.name }}</h2>
+
+    <p>{{ pet.type }}</p>
+
+    <a href="/pet/{{ id }}">
+        <button>View Pet Details</button>
+    </a>
+
+</div>
+
+{% endfor %}
+
+</body>
+</html>

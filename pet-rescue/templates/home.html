@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+
+<header class="site-header">
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/pets">Available Pets</a>
+    </nav>
+
+    <div class="logo-container">
+        <img src="{{ url_for('static',
+        filename='images/logo.png') }}"
+        alt="Fluffy Tails Pet Rescue Logo"
+        class="logo">
+    </div>
+
+</header>
+
+<h1>Welcome to Fluffy Tails Pet Rescue!</h1>
+
+<p>
+Our mission is to connect rescue pets with loving families.
+Browse available pets, learn about them, and submit adoption applications.
+</p>
+
+<ul>
+    <li>Browse adoptable pets</li>
+    <li>Learn about each pet</li>
+    <li>Submit adoption application</li>
+</ul>
+
+<a href="/pets">
+    <button>View Available Pets</button>
+</a>
+
+</body>
+</html>

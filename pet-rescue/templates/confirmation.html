@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/pets">Available Pets</a>
+    </nav>
+
+    <div class="logo-container">
+        <img src="{{ url_for('static',
+        filename='images/logo.png') }}"
+        alt="Fluffy Tails Pet Rescue Logo"
+        class="logo">
+    </div>
+
+</header>
+
+<h1>Application Submitted</h1>
+
+<p>
+Thank you for submitting your adoption application.
+</p>
+
+<p>
+Our team will review your application and
+respond within approximately two weeks.
+</p>
+
+<a href="/">
+    <button>Return Home</button>
+</a>
+
+</body>
+</html>

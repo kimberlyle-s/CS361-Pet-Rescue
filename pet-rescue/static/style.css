@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+
+    border-bottom: 2px solid #1f3b6e;
+}
+
+.logo {
+    width: 300px;
+    height: auto;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #1f3b6e;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.card {
+    border: 1px solid black;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input,
+textarea {
+    width: 100%;
+}
